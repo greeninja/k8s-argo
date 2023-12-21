@@ -6,7 +6,6 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "2"
 spec:
-  # channel: stable
   installPlanApproval: Automatic
   name: mariadb-operator
   source: operatorhubio-catalog

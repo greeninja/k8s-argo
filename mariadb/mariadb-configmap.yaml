@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mariadb
+  namespace: mariadb
+  annotations:
+    argocd.argoproj.io/sync-wave: "1" 
+data:
+  UMASK: "0660"
+  UMASK_DIR: "0750"
