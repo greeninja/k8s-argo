@@ -1,0 +1,14 @@
+apiVersion: mariadb.mmontes.io/v1alpha1
+kind: MariaDB
+metadata:
+  name: mariadb
+  namespace: mariadb
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
+spec:
+  volumeClaimTemplate:
+    resources:
+      requests:
+        storage: 1Gi
+    accessModes:
+      - ReadWriteOnce
