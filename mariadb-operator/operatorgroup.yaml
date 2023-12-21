@@ -3,6 +3,8 @@ apiVersion: operators.coreos.com/v1
 metadata:
   name: mariadb-operator-group
   namespace: default
+  annotations:
+    argocd.argoproj.io/sync-wave: "3" 
 spec:
   targetNamespaces:
   - default
