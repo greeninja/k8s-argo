@@ -9,10 +9,7 @@ spec:
   rootPasswordSecretKeyRef:
     name: mariadb
     key: root-password
-  image:
-    repository: mariadb
-    tag: "11.3.1"
-    pullPolicy: IfNotPresent
+  image: "11.3.1"
   port: 3306
   volumeClaimTemplate:
     resources:
