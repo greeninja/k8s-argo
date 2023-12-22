@@ -3,33 +3,33 @@ kind: Deployment
 metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "20"
-  name: {{ .Chart.Name }}
+  name: { { .Chart.Name } }
   labels:
-    app: {{ .Chart.Name }}
-    chart: {{ .Chart.Name }}
-    release: {{ .Release.Name }}
-    heritage: {{ .Release.Service }}
-  namespace: {{ .Values.namespace }}
+    app: { { .Chart.Name } }
+    chart: { { .Chart.Name } }
+    release: { { .Release.Name } }
+    heritage: { { .Release.Service } }
+  namespace: { { .Values.namespace } }
 spec:
-  replicas: {{ .Values.replicaCount }}
+  replicas: { { .Values.replicaCount } }
   revisionHistoryLimit: 3
   selector:
     matchLabels:
-      app: {{ .Chart.Name }}
-      release: {{ .Release.Name }}
+      app: { { .Chart.Name } }
+      release: { { .Release.Name } }
   template:
     metadata:
       labels:
-        app: {{ .Chart.Name }}
-        release: {{ .Release.Name }}
+        app: { { .Chart.Name } }
+        release: { { .Release.Name } }
     spec:
       containers:
-        - name: {{ .Chart.Name }}
+        - name: { { .Chart.Name } }
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          imagePullPolicy: { { .Values.image.pullPolicy } }
           ports:
             - name: mysql
-              containerPort: {{ .Values.containerPort }}
+              containerPort: { { .Values.containerPort } }
               protocol: TCP
           livenessProbe:
             tcpSocket:
@@ -43,7 +43,7 @@ spec:
             periodSeconds: 10
           volumeMounts:
             - name: mariadb-vol
-              mountPath: /var/lib/mysql/
+              mountPath: /var/lib/mysql
           env:
             - name: MYSQL_ROOT_PASSWORD
               valueFrom:
