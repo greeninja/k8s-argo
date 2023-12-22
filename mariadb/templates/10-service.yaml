@@ -3,7 +3,7 @@ kind: Service
 metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "10"
-  name: mariadb-service
+  name: mariadb
   namespace: {{ .Values.namespace }}
   labels:
     app: {{ .Chart.Name }}
@@ -11,8 +11,7 @@ metadata:
 spec:
   selector:
     app: {{ .Chart.Name }}
-    type: database
   ports:
   - port: 3306
-    targetPort: mysql
+    targetPort: 3306
   type: ClusterIP 
