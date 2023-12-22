@@ -1,11 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Chart.Name }}
+  name: {{ .Values.name }}
   namespace: {{ .Values.namespace }}
   labels:
-    app: {{ .Chart.Name }}
-    chart: {{ .Chart.Name }}
+    app: {{ .Values.name }}
+    chart: {{ .Values.name }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
   annotations:
@@ -15,12 +15,12 @@ spec:
   revisionHistoryLimit: 3
   selector:
     matchLabels:
-      app: {{ .Chart.Name }}
+      app: {{ .Values.name }}
       release: {{ .Release.Name }}
   template:
     metadata:
       labels:
-        app: {{ .Chart.Name }}
+        app: {{ .Values.name }}
         release: {{ .Release.Name }}
     spec:
       containers:

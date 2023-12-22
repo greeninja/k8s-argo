@@ -1,7 +1,7 @@
 ---
 
 namespace: testing-wp
-name: testin-wp
+name: testing-wp
 url: wp.k8s.devurandom.io
 
 pv:
