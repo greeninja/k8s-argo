@@ -20,7 +20,7 @@ spec:
   template:
     metadata:
       labels:
-        app: {{ .Chart.name }}
+        app: {{ .Chart.Name }}
     spec:
       containers:
         - name: wordpress
