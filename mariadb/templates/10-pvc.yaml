@@ -12,5 +12,5 @@ spec:
     - {{ .Values.pv.type }}
   resources:
     requests:
-      storage: {{ .Values.size }}
+      storage: {{ .Values.pv.size }}
 {{- end }}
