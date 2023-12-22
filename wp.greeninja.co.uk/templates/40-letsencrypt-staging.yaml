@@ -3,7 +3,7 @@ kind: Issuer
 metadata:
   name: letsencrypt-staging
   annotations:
-    argocd.argoproj.io/sync-wave: "30"
+    argocd.argoproj.io/sync-wave: "40"
 spec:
   acme:
     server: https://acme-staging-v02.api.letsencrypt.org/directory
