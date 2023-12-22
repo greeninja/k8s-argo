@@ -11,4 +11,4 @@ pv:
 db:
   user: greeninja
   passwd: password
-  name: wp-greeninja
+  name: wp_greeninja
