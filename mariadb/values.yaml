@@ -1,0 +1,20 @@
+---
+name: mariadb
+namespace: mariadb
+replicaCount: 1
+
+image:
+  repository: https://hub.docker.com/_/mariadb
+  tag: 11.3.1
+  pullPolicy: IfNotPresent
+
+containerPort: 3306
+mysqlRootPw: password
+
+service:
+  type: ClusterIP
+  port: 3306
+
+pv:
+  size: 10Gi
+  type: ReadWriteOnce
