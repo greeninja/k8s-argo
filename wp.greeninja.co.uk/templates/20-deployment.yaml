@@ -33,7 +33,7 @@ spec:
               name: https-port
           env:
             - name: WORDPRESS_DB_HOST
-              value: mariadb
+              value: mariadb.mariadb.svc.cluster.local
             - name: WORDPRESS_DB_USER
               valueFrom:
                 secretKeyRef:
