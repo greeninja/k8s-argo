@@ -41,6 +41,9 @@ spec:
               port: 3306
             initialDelaySeconds: 15
             periodSeconds: 10
+          volumeMounts:
+            - name: mariadb-vol
+              mountPath: /var/lib/mysql/
           env:
             - name: MYSQL_ROOT_PASSWORD
               valueFrom:
