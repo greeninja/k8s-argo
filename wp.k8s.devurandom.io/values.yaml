@@ -1,7 +1,7 @@
 ---
 
-namespace: wp-greeninja-co-uk
-name: wp-greeninja
+namespace: testing-wp
+name: testin-wp
 url: wp.k8s.devurandom.io
 
 pv:
