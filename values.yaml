@@ -1,0 +1,14 @@
+---
+
+namespace: wp-greeninja-co-uk
+name: wp-greeninja
+url: wp.k8s.devurandom.io
+
+pv:
+  size: 30Gi
+  type: ReadWriteMany
+
+db:
+  user: greeninja
+  passwd: password
+  name: wp-greeninja
