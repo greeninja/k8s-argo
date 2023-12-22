@@ -21,6 +21,7 @@ spec:
     metadata:
       labels:
         app: {{ .Chart.Name }}
+        release: {{ .Release.Name }}
     spec:
       containers:
         - name: wordpress
