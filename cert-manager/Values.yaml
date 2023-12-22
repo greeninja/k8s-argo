@@ -1,9 +1,0 @@
----
-installCRDs: true
-
-prometheus:
-  enabled: false
-
-webhook:
-  timeoutSeconds: 4
-
