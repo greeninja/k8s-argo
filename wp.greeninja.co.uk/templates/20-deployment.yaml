@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Values.name }}
+  name: {{ .Chart.Name }}
   namespace: {{ .Values.namespace }}
   labels:
-    app: {{ .Values.name }}
+    app: {{ .Chart.Name }}
     chart: {{ .Chart.Name }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
