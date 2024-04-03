@@ -6,8 +6,8 @@ minio:
     size: 100Gi
   resources:
     limits:
-      cpu: 200m
+      cpu: 500m
       memory: 1Gi
     requests:
       memory: 256Mi
-      cpu: 250m
+      cpu: 100m
