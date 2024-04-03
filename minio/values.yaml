@@ -2,11 +2,13 @@ minio:
   ingress:
     enabled: true
     hostname: s3-console.devurandom.io
+    tls: true
     annotations:
       cert-manager.io/cluster-issuer: "letsencrypt"
   apiIngress:
     enabled: true
     hostname: s3.devurandom.io
+    tls: true
     annotations:
       cert-manager.io/cluster-issuer: "letsencrypt"
   persistence:
