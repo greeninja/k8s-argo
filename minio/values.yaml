@@ -5,12 +5,14 @@ minio:
     tls: true
     annotations:
       cert-manager.io/cluster-issuer: "letsencrypt"
+      acme.cert-manager.io/http01-ingress-class: "openshift-default"
   apiIngress:
     enabled: true
     hostname: s3.devurandom.io
     tls: true
     annotations:
       cert-manager.io/cluster-issuer: "letsencrypt"
+      acme.cert-manager.io/http01-ingress-class: "openshift-default"
   persistence:
     size: 100Gi
   resources:
