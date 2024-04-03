@@ -1,6 +1,9 @@
 minio:
   ingress:
     enabled: true
+    hostname: s3-console.devurandom.io
+  apiIngress:
+    enabled: true
     hostname: s3.devurandom.io
   persistence:
     size: 100Gi
