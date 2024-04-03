@@ -1,16 +1,21 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: helm-guestbook
+  name: mariadb
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: argocd
+    namespace: mariadb
     server: {{ .Values.spec.destination.server }}
   project: default
   source:
     path: helm-guestbook
     repoURL: https://github.com/argoproj/argocd-example-apps
-    targetRevision: HEAD
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+    syncOptions:
+    - CreateNamespace=true
