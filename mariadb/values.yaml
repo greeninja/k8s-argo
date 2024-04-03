@@ -1,7 +1,5 @@
 mariadb:
   primary:
-    updateStrategy:
-      type: Recreate
     persistence:
       storageClass: topolvm-provisioner
       size: 100G
