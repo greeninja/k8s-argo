@@ -1,0 +1,6 @@
+minio:
+  ingress:
+    enabled: true
+    hostname: test-s3.devurandom.io
+  persistence:
+    size: 100Gi

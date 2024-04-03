@@ -2,4 +2,4 @@ mariadb:
   primary:
     persistence:
       storageClass: topolvm-provisioner
-      size: 100G
+      size: 100Gi
