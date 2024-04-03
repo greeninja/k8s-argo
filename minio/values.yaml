@@ -3,12 +3,12 @@ minio:
     enabled: true
     hostname: s3-console.devurandom.io
     annotations:
-      cert-manager.io/cluster-issuer: letsencrypt
+      cert-manager.io/cluster-issuer: "letsencrypt"
   apiIngress:
     enabled: true
     hostname: s3.devurandom.io
     annotations:
-      cert-manager.io/cluster-issuer: letsencrypt
+      cert-manager.io/cluster-issuer: "letsencrypt"
   persistence:
     size: 100Gi
   resources:
