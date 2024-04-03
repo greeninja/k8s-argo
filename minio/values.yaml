@@ -4,3 +4,10 @@ minio:
     hostname: s3.devurandom.io
   persistence:
     size: 100Gi
+  resources:
+    limits:
+      cpu: 200m
+      memory: 1Gi
+    requests:
+      memory: 256Mi
+      cpu: 250m
