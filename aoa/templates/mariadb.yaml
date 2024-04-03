@@ -13,7 +13,7 @@ spec:
   source:
     path: helm-guestbook
     repoURL: https://github.com/argoproj/argocd-example-apps
-    targetRevision: main
+    targetRevision: HEAD
   syncPolicy:
     automated:
       prune: true
