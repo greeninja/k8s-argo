@@ -3,3 +3,5 @@ mariadb:
     persistence:
       storageClass: topolvm-provisioner
       size: 100Gi
+  auth:
+    rootPassword: Jq61NLbqK8
