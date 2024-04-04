@@ -16,6 +16,7 @@ wordpress:
   externalDatabase:
     host: mariadb.mariadb.svc.cluster.local
     port: 3306
+    database: selfasteam
     user: selfasteam
     existingSecret: db-password
 
