@@ -7,4 +7,4 @@ appVersion: "1.0"
 dependencies:
 - name: passbolt
   version: o.7.2
-  repository: https://download.passbolt.com/charts/
+  repository: https://download.passbolt.com/charts
