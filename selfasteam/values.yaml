@@ -8,6 +8,9 @@ wordpress:
     selfSigned: true
     annotations: {}
 
+  service:
+    type: ClusterIP
+
   persistence:
     size: 50Gi
 
