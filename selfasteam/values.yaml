@@ -1,0 +1,23 @@
+selfasteam:
+  # wordpressSkipInstall: true
+  htaccessPersistenceEnabled: true
+  ingress:
+    enabled: true
+    hostname: selfasteam.co.uk
+    tls: true
+    selfSigned: true
+    annotations: {}
+
+  persistence:
+    size: 50Gi
+
+  mariadb:
+    enabled: false
+  externalDatabase:
+    host: mariadb.mariadb.svc.cluster.local
+    port: 3306
+    user: selfasteam
+    existingSecret: db-password
+
+  memcached:
+    enabled: true

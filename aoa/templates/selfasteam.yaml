@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: selfasteam
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: selfasteam
+    server: {{ .Values.spec.destination.server }}
+  project: default
+  source:
+    path: selfasteam
+    repoURL: https://gitlab.com/greeninja/k8s-argo.git
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+    syncOptions:
+    - CreateNamespace=true
