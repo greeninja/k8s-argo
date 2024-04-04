@@ -1,0 +1,26 @@
+wordpress:
+  htaccessPersistenceEnabled: true
+  ingress:
+    enabled: true
+    hostname: greeninja.co.uk
+    tls: true
+    selfSigned: true
+    annotations: {}
+
+  service:
+    type: ClusterIP
+
+  persistence:
+    size: 20Gi
+
+  mariadb:
+    enabled: false
+  externalDatabase:
+    host: mariadb.mariadb.svc.cluster.local
+    port: 3306
+    database: greeninja
+    user: greeninja
+    existingSecret: db-password
+
+  memcached:
+    enabled: true
