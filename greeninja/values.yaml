@@ -1,4 +1,5 @@
 wordpress:
+  wordpressSkipInstall: true
   htaccessPersistenceEnabled: true
   ingress:
     enabled: true
@@ -11,7 +12,7 @@ wordpress:
     type: ClusterIP
 
   persistence:
-    size: 20Gi
+    size: 10Gi
 
   mariadb:
     enabled: false
