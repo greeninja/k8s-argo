@@ -1,0 +1,38 @@
+vmware-tanzu:
+  metrics:
+    enabled: false
+  configuration:
+    backupStorageLocation:
+    - name: default
+      provider: aws
+      bucket: nck8svelerobackups
+      prefix: k8s-backups
+      default: true
+      credential:
+        name: s3-secret
+        key: velero-creds
+      config:
+        region: eu-west-2
+    
+    volumeSnapshotLocation:
+    - name: default
+      provider: aws
+      credentials:
+        name: s3-secret
+        key: velero-creds
+      config:
+        region: eu-west-2
+        
+    defaultVolumesToFsBackup: true
+
+    credentials:
+      exisitingSecret: s3-secret
+      
+    schedules:
+      backup:
+        disabled: false
+        schedule: "3 0 * * *"
+        useOwnerReferencesInBackup: false
+        template:
+          ttl: "168h"
+          storageLocation: default
