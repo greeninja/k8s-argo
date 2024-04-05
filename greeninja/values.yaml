@@ -1,5 +1,5 @@
 wordpress:
-  wordpressSkipInstall: true
+  wordpressSkipInstall: false
   htaccessPersistenceEnabled: true
   ingress:
     enabled: true
