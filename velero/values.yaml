@@ -27,6 +27,10 @@ velero:
   snapshotsEnabled: false
   deployNodeAgent: true
 
+  nodeAgent:
+    containerSecurityContext:
+      privileged: true
+
   schedules:
     backup:
       disabled: false
