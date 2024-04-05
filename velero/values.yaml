@@ -20,20 +20,19 @@ velero:
           key: velero-creds
         config:
           region: eu-west-2
-    
-    snapshotsEnabled: false
-
     defaultVolumesToFsBackup: true
-    deployNodeAgent: true
-
     credentials:
       exisitingSecret: s3-secret
 
-    schedules:
-      backup:
-        disabled: false
-        schedule: "3 0 * * *"
-        useOwnerReferencesInBackup: false
-        template:
-          ttl: "168h"
-          storageLocation: default
+
+  snapshotsEnabled: false
+  deployNodeAgent: true
+
+  schedules:
+    backup:
+      disabled: false
+      schedule: "3 0 * * *"
+      useOwnerReferencesInBackup: false
+      template:
+        ttl: "168h"
+        storageLocation: default
