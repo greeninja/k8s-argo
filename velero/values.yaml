@@ -24,7 +24,6 @@ velero:
     credentials:
       exisitingSecret: s3-secret
 
-
   snapshotsEnabled: false
   deployNodeAgent: true
 
@@ -36,3 +35,19 @@ velero:
       template:
         ttl: "168h"
         storageLocation: default
+        excludedNamespaces:
+        - openshift-controller-manager
+        - openshift-dns
+        - openshift-infra
+        - openshift-ingress
+        - openshift-kube-controller-manager
+        - openshift-ovn-kubernetes
+        - openshift-route-controller-manager
+        - openshift-service-ca
+        - openshift-storage
+        - velero
+        - argocd
+        - cert-manager
+        - kube-node-lease
+        - kube-public
+        - kube-system
