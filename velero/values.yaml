@@ -1,4 +1,4 @@
-vmware-tanzu:
+velero:
   metrics:
     enabled: false
   configuration:
