@@ -20,15 +20,8 @@ velero:
           key: velero-creds
         config:
           region: eu-west-2
-
-    volumeSnapshotLocation:
-      - name: default
-        provider: restic
-        credentials:
-          name: s3-secret
-          key: velero-creds
-        config:
-          region: eu-west-2
+    
+    snapshotsEnabled: false
 
     defaultVolumesToFsBackup: true
     deployNodeAgent: true
