@@ -25,3 +25,12 @@ wordpress:
 
   memcached:
     enabled: true
+
+  resources:
+    limits:
+      cpu: 3
+      memory: 4Gi
+    requests:
+      memory: 1Gi
+      cpu: 1
+
