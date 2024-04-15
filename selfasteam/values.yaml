@@ -5,9 +5,9 @@ wordpress:
     enabled: true
     hostname: selfasteam.co.uk
     tls: true
-    selfSigned: true
-    annotations: {}
-
+    selfSigned: false
+    annotations:
+      cert-manager.io/cluster-issuer: "letsencrypt"
   service:
     type: ClusterIP
 
