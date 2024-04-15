@@ -1,1 +1,7 @@
----
+metrics-server:
+  securityContext:
+    runAsUser: 1000221234
+
+  addonResizer:
+    securityContext:
+      runAsUser: 1000221234
