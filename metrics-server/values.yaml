@@ -5,3 +5,6 @@ metrics-server:
   addonResizer:
     securityContext:
       runAsUser: 1000221234
+  
+  apiService:
+    insecureSkipTLSVerify: true
