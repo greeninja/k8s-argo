@@ -41,7 +41,7 @@ owncloud:
       - localhost
 
   extraEnvVarsSecret:
-    name: OWNCLOUD_DB_PASSWORD
+  - name: OWNCLOUD_DB_PASSWORD
     value: db-password-2
     
 
