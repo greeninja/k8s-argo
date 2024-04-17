@@ -18,10 +18,6 @@ owncloud:
   extraEnvVars:
     - name: OWNCLOUD_VOLUME_ROOT
       value: /bitnami/owncloud/
-    - name: OWNCLOUD_SKIP_CHMOD
-      value: true
-    - name: OWNCLOUD_SKIP_CHOWN
-      value: true
 
   owncloudSkipInstall: true
 
