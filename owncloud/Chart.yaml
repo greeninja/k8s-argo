@@ -1,0 +1,10 @@
+apiVersion: v2
+name: owncloud
+description: Chart for Owncloud
+type: application
+version: 0.1.0
+appVersion: "1.0"
+dependencies:
+- name: owncloud
+  version: 0.8.0
+  repository: https://owncloud-docker.github.io/helm-charts

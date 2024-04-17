@@ -2,6 +2,26 @@
 
 Argo AoA pattern to stand up apps on k8s.lan
 
+## Local Argo Dashboard
+
+- Start port forwarding
+
+```bash
+$ ssh -L 6443:k8s.lan:6443 k8s.lan
+```
+
+- Export the k8s config
+
+```bash
+$ export KUBECONFIG=~/.kube/k8s-config
+```
+
+- Start the local Argo Dashboard
+
+```bash
+argocd admin dashboard -n argocd
+```
+
 ## Manual Configurations
 
 - Updated the configuration to use second ssd for topolvm:
@@ -30,4 +50,8 @@ spec:
        ingress:
          serviceType: ClusterIP
 ```
+
+- Create the velro AWS backup creds
+
+
 

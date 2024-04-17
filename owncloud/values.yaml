@@ -1,0 +1,27 @@
+owncloud:
+  ingress:
+    enabled: true
+    annotations: {}
+
+  owncloud:
+    db:
+      host: mariadb.mariadb.svc.cluster.local
+      name: owncloud
+      type: mysql
+      username: owncloud
+      password: to-do
+
+    domain: cloud.awali.co.uk
+    
+    trustedDomains:
+      - owncloud.greeninja.co.uk
+      - cloud.devurandom.io
+      - cloud.awali.co.uk
+
+
+  persistence:
+    owncloud:
+      size: 250Gi
+
+  service:
+    type: ClusterIP
