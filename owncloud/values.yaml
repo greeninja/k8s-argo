@@ -26,8 +26,21 @@ owncloud:
     value: "false"
   - name: OWNCLOUD_BACKGROUND_MODE
     value: Webcron
-  - name: OWNCLOUD_ENTRYPOINT_INITIALIZED
-    value: "false"
+    - name: OWNCLOUD_DB_HOST
+    value: mariadb.mariadb.svc.cluster.local
+  - name: OWNCLOUD_DB_TYPE
+    value: mysql
+  - name: OWNCLOUD_DB_USERNAME
+    value: owncloud
+  - name: OWNCLOUD_TRUSTED_DOMAINS
+    value:
+      - cloud.awalioilandgas.com
+      - owncloud.greeninja.co.uk
+      - cloud.greeninja.co.uk
+      - cloud.awali.co.uk
+      - localhost
+  - name: OWNCLOUD_DB_PASSWORD
+    value: "${OWNCLOUD_DATABASE_PASSWORD}"
 
   owncloudSkipInstall: true
 
