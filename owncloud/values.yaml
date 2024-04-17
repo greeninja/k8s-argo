@@ -40,6 +40,9 @@ owncloud:
       - cloud.awali.co.uk
       - localhost
 
+  extraEnvVarsSecret: db-password-2
+    
+
   owncloudSkipInstall: true
 
   mariadb:
