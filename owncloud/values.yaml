@@ -30,4 +30,6 @@ owncloud:
     type: ClusterIP
 
   containerSecurityContext:
-    runAsUser: 1000231234
+    enabled: false
+  podSecurityContext:
+    enabled: false
