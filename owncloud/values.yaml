@@ -28,3 +28,6 @@ owncloud:
 
   service:
     type: ClusterIP
+
+  containerSecurityContext:
+    runAsUser: 1000231234
