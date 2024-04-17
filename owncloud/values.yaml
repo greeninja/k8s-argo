@@ -33,12 +33,7 @@ owncloud:
   - name: OWNCLOUD_DB_USERNAME
     value: owncloud
   - name: OWNCLOUD_TRUSTED_DOMAINS
-    value:
-      - cloud.awalioilandgas.com
-      - owncloud.greeninja.co.uk
-      - cloud.greeninja.co.uk
-      - cloud.awali.co.uk
-      - localhost
+    value: "cloud.awalioilandgas.com,owncloud.greeninja.co.uk,cloud.greeninja.co.uk,cloud.awali.co.uk,localhost"
 
   extraEnvVarsSecret: "db-password-2"
     
