@@ -4,8 +4,10 @@ owncloud:
     hostname: cloud.awali.co.uk
     tls: true
     extraHosts:
-      - cloud.greeninja.co.uk
-      - cloud.devurandom.io
+    - name: cloud.greeninja.co.uk
+      path: /
+    - name: cloud.devurandom.io
+      path: /
     annotations: {}
 
   owncloudSkipInstall: true
