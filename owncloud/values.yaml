@@ -1,27 +1,28 @@
 owncloud:
   ingress:
     enabled: true
+    hostname: cloud.awali.co.uk
+    tls: true
+    extraHosts:
+      - cloud.greeninja.co.uk
+      - cloud.devurandom.io
     annotations: {}
 
-  owncloud:
-    db:
-      host: mariadb.mariadb.svc.cluster.local
-      name: owncloud
-      type: mysql
-      username: owncloud
-      password: to-do
+  owncloudSkipInstall: true
 
-    domain: cloud.awali.co.uk
-    
-    trustedDomains:
-      - owncloud.greeninja.co.uk
-      - cloud.devurandom.io
-      - cloud.awali.co.uk
+  mariadb:
+    enabled: false
 
+  externalDatabase:
+    host: mariadb.mariadb.svc.cluster.local
+    port: 3306
+    user: owncloud
+    database: owncloud
+    existingSecret: db-password
 
   persistence:
-    owncloud:
-      size: 250Gi
+    enabled: true
+    size: 200Gi
 
   service:
     type: ClusterIP
