@@ -22,6 +22,10 @@ owncloud:
     value: "true"
   - name: OWNCLOUD_SKIP_CHOWN
     value: "true"
+  - name: OWNCLOUD_CROND_ENABLED
+    value: "false"
+  - name: OWNCLOUD_BACKGROUND_MODE
+    value: Webcron
 
   owncloudSkipInstall: true
 
