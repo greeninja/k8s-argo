@@ -40,7 +40,9 @@ owncloud:
       - cloud.awali.co.uk
       - localhost
 
-  extraEnvVarsSecret: db-password-2
+  extraEnvVarsSecret:
+    name: OWNCLOUD_DB_PASSWORD
+    value: db-password-2
     
 
   owncloudSkipInstall: true
