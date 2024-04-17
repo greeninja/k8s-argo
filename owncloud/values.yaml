@@ -39,8 +39,6 @@ owncloud:
       - cloud.greeninja.co.uk
       - cloud.awali.co.uk
       - localhost
-  - name: OWNCLOUD_DB_PASSWORD
-    value: '${OWNCLOUD_DATABASE_PASSWORD}'
 
   owncloudSkipInstall: true
 
