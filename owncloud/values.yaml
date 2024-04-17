@@ -15,6 +15,10 @@ owncloud:
     repository: owncloud/server
     tag: 10.13.4
 
+  extraEnvVars:
+    - name: OWNCLOUD_VOLUME_ROOT
+      value: /bitnami/owncloud/
+
   owncloudSkipInstall: true
 
   mariadb:
