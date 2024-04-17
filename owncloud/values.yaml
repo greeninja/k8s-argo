@@ -26,6 +26,8 @@ owncloud:
     value: "false"
   - name: OWNCLOUD_BACKGROUND_MODE
     value: Webcron
+  - name: OWNCLOUD_ENTRYPOINT_INITIALIZED
+    value: "false"
 
   owncloudSkipInstall: true
 
