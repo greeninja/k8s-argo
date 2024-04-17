@@ -10,6 +10,11 @@ owncloud:
       path: /
     annotations: {}
 
+  image:
+    registry: docker.io
+    repository: owncloud/server
+    tag: 10.13.4
+
   owncloudSkipInstall: true
 
   mariadb:
