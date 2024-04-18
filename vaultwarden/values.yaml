@@ -6,6 +6,8 @@ onechart:
   vars:
     ROCKET_PORT: 8000
 
+  containerPort: 8000
+
   ingress:
     annotations: {}
     host: vault.devurandom.io
