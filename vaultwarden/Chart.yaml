@@ -1,0 +1,10 @@
+apiVersion: v2
+name: vaultwarden
+description: Chart for Vaultwarden - Using onechart
+type: application
+version: 0.1.0
+appVersion: "1.0"
+dependencies:
+  - name: onechart
+    version: 26.8.6
+    repository: https://chart.onechart.dev
