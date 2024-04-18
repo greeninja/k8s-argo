@@ -1,43 +1,44 @@
-image:
-  repository: dociker.io/vaultwarden/server
-  tag: 1.30.5-alpine
+vaultwarden:
+  image:
+    repository: dociker.io/vaultwarden/server
+    tag: 1.30.5-alpine
 
-vars: {}
+  vars: {}
 
-ingress:
-  annotations: {}
-  host: vault.devurandom.io
-  tlsEnabled: true
+  ingress:
+    annotations: {}
+    host: vault.devurandom.io
+    tlsEnabled: true
 
-volumes:
-  - name: data
-    path: /data
-    size: 20Gi
+  volumes:
+    - name: data
+      path: /data
+      size: 20Gi
 
-secretName: admin-passphrase
+  secretName: admin-passphrase
 
-securityContext:
-  allowPrivilegeEscalation: false
-  capabilities:
-    drop: 
-    - ALL
-  privileged: false
-  readOnlyRootFilesystem: true                                                                                                                                                  
-  runAsNonRoot: true
-  seccompProfile:
-    type: RuntimeDefault
+  securityContext:
+    allowPrivilegeEscalation: false
+    capabilities:
+      drop: 
+      - ALL
+    privileged: false
+    readOnlyRootFilesystem: true                                                                                                                                                  
+    runAsNonRoot: true
+    seccompProfile:
+      type: RuntimeDefault
 
-resources:
-  limits:
-    cpu: "1"
-    memory: "512Mi"
+  resources:
+    limits:
+      cpu: "1"
+      memory: "512Mi"
 
-probe:
-  enabled: true
-  path: '/api/alive'
-  settings:
-    initialDelaySeconds: 0
-    periodSeconds: 10
-    successThreshold: 1
-    timeoutSeconds: 3
-    failureThreshold: 3
+  probe:
+    enabled: true
+    path: '/api/alive'
+    settings:
+      initialDelaySeconds: 0
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 3
+      failureThreshold: 3
