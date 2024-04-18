@@ -9,9 +9,10 @@ onechart:
   containerPort: 8000
 
   ingress:
-    annotations: {}
+    annotations:
+      
     host: vault.devurandom.io
-    tlsEnabled: false
+    tlsEnabled: true
 
   volumes:
     - name: data
