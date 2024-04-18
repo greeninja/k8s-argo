@@ -11,7 +11,7 @@ onechart:
   ingress:
     annotations: {}
     host: vault.devurandom.io
-    tlsEnabled: true
+    tlsEnabled: false
 
   volumes:
     - name: data
