@@ -43,8 +43,5 @@ onechart:
       timeoutSeconds: 3
       failureThreshold: 3
 
-  podSpec:
-    template:
-      spec:
-        securityContext:
-          fsGroup: 1000240000
+  podSecurityContext:
+    fsGroup: 1000240000
