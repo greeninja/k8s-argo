@@ -3,7 +3,9 @@ onechart:
     repository: docker.io/vaultwarden/server
     tag: 1.30.5-alpine
 
-  vars: {}
+  vars:
+    - name: ROCKET_PORT
+      value: 8000
 
   ingress:
     annotations: {}
