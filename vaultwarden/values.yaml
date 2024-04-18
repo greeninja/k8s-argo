@@ -4,8 +4,7 @@ onechart:
     tag: 1.30.5-alpine
 
   vars:
-    - name: ROCKET_PORT
-      value: 8000
+    ROCKET_PORT: 8000
 
   ingress:
     annotations: {}
