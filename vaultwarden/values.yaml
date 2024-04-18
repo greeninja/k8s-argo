@@ -5,6 +5,9 @@ onechart:
 
   vars:
     ROCKET_PORT: 8000
+    PUSH_ENABLED: true
+    PUSH_RELAY_URI: https://push.bitwarden.eu
+    PUSH_IDENTITY_URI: https://identity.bitwarden.eu
 
   containerPort: 8000
 
