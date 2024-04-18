@@ -1,4 +1,4 @@
-vaultwarden:
+onechart:
   image:
     repository: dociker.io/vaultwarden/server
     tag: 1.30.5-alpine
