@@ -1,6 +1,6 @@
 onechart:
   image:
-    repository: dociker.io/vaultwarden/server
+    repository: docker.io/vaultwarden/server
     tag: 1.30.5-alpine
 
   vars: {}
@@ -42,3 +42,9 @@ onechart:
       successThreshold: 1
       timeoutSeconds: 3
       failureThreshold: 3
+
+  podSpec:
+    template:
+      spec:
+        securityContext:
+          fsGroup: 1000240000
