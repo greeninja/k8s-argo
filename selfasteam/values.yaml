@@ -45,9 +45,5 @@ wordpress:
       if ! test -f /opt/bitnami/wordpress/wordfence-waf.php; then
         ln -s /bitnami/wordpress/wordfence-waf.php /opt/bitnami/wordpress/wordfence-waf.php
       fi
-
-  command:
-    - /docker-entrypoint-init.d/wordfence.sh;
-    - /opt/bitnami/scripts/apache/run.sh;
       
 
