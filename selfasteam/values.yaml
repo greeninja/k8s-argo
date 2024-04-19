@@ -41,6 +41,7 @@ wordpress:
   customPostInitScripts:
     wordfence.sh: |
       #!/bin/bash
+      echo "Fixing wordfecne..."
       ln -s /bitnami/wordpress/wordfence-waf.php /opt/bitnami/wordpress/wordfence-waf.php
       
 
