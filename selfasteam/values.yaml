@@ -34,3 +34,9 @@ wordpress:
       cpu: "1"
       memory: 1Gi
 
+  customPostInitScripts:
+    wordfence.sh: |
+      #!/bin/bash
+      ln -s /bitnami/wordpress/wordfence-waf.php /opt/bitnami/wordpress/wordfence-waf.php
+      
+
