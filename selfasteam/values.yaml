@@ -34,6 +34,10 @@ wordpress:
       cpu: "1"
       memory: 1Gi
 
+  livenessProbe:
+    httpGet:
+      path: /wp-login.php
+
   customPostInitScripts:
     wordfence.sh: |
       #!/bin/bash
