@@ -47,8 +47,7 @@ wordpress:
       fi
 
   command:
-    - /docker-entrypoint-init.d/wordfence.sh
-    - '&&'
-    - /opt/bitnami/scripts/apache/run.sh
+    - /docker-entrypoint-init.d/wordfence.sh;
+    - /opt/bitnami/scripts/apache/run.sh;
       
 
