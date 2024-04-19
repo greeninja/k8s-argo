@@ -43,10 +43,5 @@ wordpress:
       #!/bin/bash
       echo "Fixing wordfence..."
       ln -s /bitnami/wordpress/wordfence-waf.php /opt/bitnami/wordpress/wordfence-waf.php
-
-  command:
-    - /docker-entrypoint-init.d/wordfence.sh
-    - '&&'
-    - /opt/bitnami/scripts/apache/run.sh
       
 
