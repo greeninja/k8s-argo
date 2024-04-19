@@ -13,7 +13,7 @@ owncloud:
   image:
     registry: docker.io
     repository: owncloud/server
-    tag: 10.13.4
+    tag: 10.14.0
 
   extraEnvVars:
   - name: OWNCLOUD_VOLUME_ROOT
