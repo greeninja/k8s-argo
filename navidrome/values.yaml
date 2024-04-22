@@ -1,6 +1,6 @@
 onechart:
   image:
-    repository: deluan/navidrome:latest
+    repository: deluan/navidrome
     tag: pr-2950
 
   vars:
