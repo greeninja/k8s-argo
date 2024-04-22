@@ -1,0 +1,43 @@
+onechart:
+  image:
+    repository: deluan/navidrome:latest
+    tag: pr-2950
+
+  vars:
+      ND_SCANSCHEDULE: 1h
+      ND_LOGLEVEL: info  
+      ND_SESSIONTIMEOUT: 24h
+      ND_BASEURL: "http://music.devurandom.io"
+
+  containerPort: 4533
+
+  ingress:
+    annotations: {}
+    host: music.devurandom.io
+    # tlsEnabled: true
+
+  volumes:
+    - name: data
+      path: /data
+      size: 20Gi
+    - name: music
+      path: /music
+      size: 100Gi
+
+  securityContext:
+    allowPrivilegeEscalation: false
+    capabilities:
+      drop: 
+      - ALL
+    privileged: false
+    readOnlyRootFilesystem: true                                                                                                                                                  
+    runAsNonRoot: true
+    seccompProfile:
+      type: RuntimeDefault
+
+  resources:
+    limits:
+      cpu: "1"
+      memory: "512Mi"
+
+  podSecurityContext: {}

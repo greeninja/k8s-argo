@@ -1,21 +1,21 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: vaultwarden
+  name: navidrome
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: vaultwarden
+    namespace: navidrome
     server: {{ .Values.spec.destination.server }}
   project: default
   source:
-    path: vaultwarden
+    path: navidrome
     repoURL: https://gitlab.com/greeninja/k8s-argo.git
     targetRevision: main
   syncPolicy:
     automated:
-      prune: false
+      prune: true
     syncOptions:
     - CreateNamespace=true
