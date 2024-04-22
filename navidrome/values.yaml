@@ -40,4 +40,5 @@ onechart:
       cpu: "1"
       memory: "512Mi"
 
-  podSecurityContext: {}
+  podSecurityContext:
+    fsGroup: 1000250000
